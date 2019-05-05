@@ -1,0 +1,19 @@
+{
+  "name": "vendor/ter",
+  "description": "Twitter json parser",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Denys Bezuhlyi",
+      "email": "denys.bezu@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": ""
+    }
+  },
+  "require": {
+    "apache/log4php": "2.3.0"
+  }
+}
