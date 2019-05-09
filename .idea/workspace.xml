@@ -2,23 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a1703d2-5b4c-4587-892b-b8a178f0be69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Classes/Models/AbstractModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Classes/Models/Insertable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Classes/Models/Language.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Classes/Models/Selectable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Classes/TweetJsonParser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/test.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Classes/Models/City.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Classes/Models/Country.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Classes/Models/Region.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Classes/Models/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script_bdd_twitter.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f5be6aed-b6b4-4489-b3d0-29b2f8a75962.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f5be6aed-b6b4-4489-b3d0-29b2f8a75962.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/storage_v2/_src_/database/twitter_ter.VSj-kg/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/storage_v2/_src_/database/twitter_ter.VSj-kg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/storage_v2/_src_/database/twitter_ter.VSj-kg/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/storage_v2/_src_/database/twitter_ter.VSj-kg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/storage_v2/_src_/database/twitter_ter.VSj-kg/schema/pg_temp_1.zkWuFg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/storage_v2/_src_/database/twitter_ter.VSj-kg/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/storage_v2/_src_/database/twitter_ter.VSj-kg/schema/pg_toast.33HYYw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/storage_v2/_src_/database/twitter_ter.VSj-kg/schema/pg_toast.33HYYw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/storage_v2/_src_/database/twitter_ter.VSj-kg/schema/pg_toast_temp_1.5ixBaA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/storage_v2/_src_/database/twitter_ter.VSj-kg/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/storage_v2/_src_/database/twitter_ter.VSj-kg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/storage_v2/_src_/database/twitter_ter.VSj-kg/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Parser.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Parser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myLog.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/TweetJsonParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/TweetJsonParser.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,6 +78,36 @@
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="twitter_ter: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="city: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="twitter_ter: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="country: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="twitter_ter: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tweeter_user: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
     </expand>
     <select />
   </component>
@@ -90,54 +117,58 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TwitterParser.php">
+        <entry file="file://$PROJECT_DIR$/Classes/TweetJsonParser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+            <state relative-caret-position="389">
+              <caret line="133" selection-start-line="133" selection-end-line="133" />
               <folding>
-                <element signature="e#7#30#0#PHP" expanded="true" />
+                <element signature="e#33#61#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/Parser.php">
+        <entry file="file://$PROJECT_DIR$/Classes/Models/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+            <state relative-caret-position="136">
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Classes/TweetJsonParser.php">
+        <entry file="file://$PROJECT_DIR$/script_bdd_twitter.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#405#746#0#PHP" />
-              </folding>
+            <state relative-caret-position="1710">
+              <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://f5be6aed-b6b4-4489-b3d0-29b2f8a75962/database/twitter_ter/schema/public/table/language">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true">
-                <filter text="" />
-              </filtering>
+        <entry file="file://$PROJECT_DIR$/Data/test.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="1323" selection-start-line="15" selection-start-column="1319" selection-end-line="15" selection-end-column="1323" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/Models/City.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="703">
+              <caret line="37" column="21" selection-start-line="27" selection-start-column="8" selection-end-line="37" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/Models/Region.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -145,8 +176,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classes/Models/Language.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+            <state relative-caret-position="646">
+              <caret line="34" column="21" selection-start-line="26" selection-start-column="7" selection-end-line="34" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -154,8 +185,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classes/Models/AbstractModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state relative-caret-position="152">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -165,6 +196,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>zend</find>
+      <find>created_at</find>
+      <find>city</find>
+      <find>country</find>
+      <find>full_name</find>
+      <find>user</find>
+      <find>, France</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -189,11 +226,21 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Classes/Models/Insertable.php" />
         <option value="$PROJECT_DIR$/Classes/Models/Selectable.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/console.sql" />
         <option value="$PROJECT_DIR$/Classes/Models/AbstractModel.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/Classes/Models/Language.php" />
+        <option value="$PROJECT_DIR$/Data/test.json" />
+        <option value="$PROJECT_DIR$/Classes/Models/Year.php" />
+        <option value="$PROJECT_DIR$/Classes/Models/Month.php" />
+        <option value="$PROJECT_DIR$/Classes/Models/Day.php" />
+        <option value="$PROJECT_DIR$/Classes/Models/REgion.php" />
+        <option value="$PROJECT_DIR$/Classes/Models/Country.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/console.sql" />
+        <option value="$PROJECT_DIR$/Classes/Models/Region.php" />
+        <option value="$PROJECT_DIR$/Classes/Models/City.php" />
         <option value="$PROJECT_DIR$/Classes/TweetJsonParser.php" />
+        <option value="$PROJECT_DIR$/Classes/Models/User.php" />
+        <option value="$PROJECT_DIR$/script_bdd_twitter.sql" />
       </list>
     </option>
   </component>
@@ -220,7 +267,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -239,10 +285,16 @@
               <item name="Classes" type="462c0819:PsiDirectoryNode" />
               <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ter" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -254,11 +306,11 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Data" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -274,15 +326,28 @@
     </option>
   </component>
   <component name="RunManager" selected="PHP Script.index.php">
+    <configuration name="TweetJsonParser.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/Classes/TweetJsonParser.php">
+      <method v="2" />
+    </configuration>
     <configuration name="TwitterParser.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/TwitterParser.php">
       <method v="2" />
     </configuration>
     <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/index.php">
       <method v="2" />
     </configuration>
+    <configuration name="Unnamed" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" nameIsGenerated="true" server_name="Unnamed">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="PHP Script.index.php" />
+      <item itemvalue="PHP Script.TwitterParser.php" />
+      <item itemvalue="PHP Script.TweetJsonParser.php" />
+      <item itemvalue="PHP Web Page.Unnamed" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="PHP Script.index.php" />
+        <item itemvalue="PHP Script.TweetJsonParser.php" />
         <item itemvalue="PHP Script.TwitterParser.php" />
       </list>
     </recent_temporary>
@@ -304,22 +369,41 @@
       <workItem from="1557059713903" duration="2158000" />
       <workItem from="1557066054690" duration="1685000" />
       <workItem from="1557068212605" duration="1911000" />
-      <workItem from="1557070652843" duration="1781000" />
+      <workItem from="1557070652843" duration="2643000" />
+      <workItem from="1557261737571" duration="2744000" />
+      <workItem from="1557400208515" duration="2575000" />
+      <workItem from="1557428891120" duration="2093000" />
+      <workItem from="1557431741033" duration="924000" />
     </task>
+    <task id="LOCAL-00001" summary="Added test lang parsing, logger configured, added core part for models and parser">
+      <created>1557090409034</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1557090409034</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added date parsing">
+      <created>1557264747263</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557264747263</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11506000" />
+    <option name="totallyTimeSpent" value="20704000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49818182" visible="true" weight="0.25921375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49818182" visible="true" weight="0.18427518" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5018182" side_tool="true" weight="0.21068797" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298647" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19562955" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3361082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20811655" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -334,55 +418,22 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.22972973" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.19717444" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/index.php</url>
-          <line>2</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added test lang parsing, logger configured, added core part for models and parser" />
+    <MESSAGE value="Added date parsing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added date parsing" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file:///usr/local/etc/php/7.3/php.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f5be6aed-b6b4-4489-b3d0-29b2f8a75962/database/twitter_ter/schema/public/table/day">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f5be6aed-b6b4-4489-b3d0-29b2f8a75962/database/twitter_ter/schema/public/table/year">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f5be6aed-b6b4-4489-b3d0-29b2f8a75962/database/twitter_ter/schema/public/table/city">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
         </state>
       </provider>
     </entry>
@@ -393,9 +444,6 @@
           <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/test.json">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Readme.md">
       <provider editor-type-id="text-editor" />
@@ -414,13 +462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -459,27 +500,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Models/AbstractModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+    <entry file="file://$PROJECT_DIR$/myLog.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="83">
+          <caret line="629" column="9" lean-forward="true" selection-end-line="15694" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Parser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-          <folding>
-            <element signature="e#7#30#0#PHP" expanded="true" />
-          </folding>
+    <entry file="das://f5be6aed-b6b4-4489-b3d0-29b2f8a75962/database/twitter_ter/schema/public/table/media">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
@@ -490,14 +523,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myLog.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="83">
-          <caret line="629" column="9" lean-forward="true" selection-end-line="15694" />
+    <entry file="uml://DATABASE/f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.city">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.city</OriginalElement>
+          <nodes>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.day</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.media</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.language</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.tweet_retweet</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.year</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.hashtag</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.tweet_like</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.month</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.tweeter_user_follow</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.country</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.subject</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.tweet_mention</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.tweet_media</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.tweet_reply</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.keyword</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.region</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.tweet_hashtag</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.tweeter_user</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.city</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.tweet</node>
+            <node x="" y="">f5be6aed-b6b4-4489-b3d0-29b2f8a75962.TABLE:twitter_ter.public.tweet_keyword</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.5015179113539769" x="814.0" y="519.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
-    <entry file="das://f5be6aed-b6b4-4489-b3d0-29b2f8a75962/database/twitter_ter/schema/public/table/media">
+    <entry file="das://f5be6aed-b6b4-4489-b3d0-29b2f8a75962/database/twitter_ter/schema/public/table/year">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f5be6aed-b6b4-4489-b3d0-29b2f8a75962/database/twitter_ter/schema/public/table/month">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true">
@@ -515,20 +590,166 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://f5be6aed-b6b4-4489-b3d0-29b2f8a75962/database/twitter_ter/schema/public/table/day">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+          <folding>
+            <element signature="e#7#30#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Parser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Models/Day.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f5be6aed-b6b4-4489-b3d0-29b2f8a75962/database/twitter_ter/schema/public/table/city.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f5be6aed-b6b4-4489-b3d0-29b2f8a75962/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="40" lean-forward="true" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f5be6aed-b6b4-4489-b3d0-29b2f8a75962/database/twitter_ter/schema/public/table/country">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Models/Country.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Models/Month.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="36" column="21" selection-start-line="26" selection-start-column="8" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Models/Year.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="35" column="5" selection-start-line="11" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f5be6aed-b6b4-4489-b3d0-29b2f8a75962/database/twitter_ter/schema/public/table/city">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f5be6aed-b6b4-4489-b3d0-29b2f8a75962/database/twitter_ter/schema/public/table/region">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/test.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="1323" selection-start-line="15" selection-start-column="1319" selection-end-line="15" selection-end-column="1323" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Models/City.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="37" column="21" selection-start-line="27" selection-start-column="8" selection-end-line="37" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Models/Region.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Models/Language.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        <state relative-caret-position="646">
+          <caret line="34" column="21" selection-start-line="26" selection-start-column="7" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Models/AbstractModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/TweetJsonParser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="389">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
           <folding>
-            <element signature="e#405#746#0#PHP" />
+            <element signature="e#33#61#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f5be6aed-b6b4-4489-b3d0-29b2f8a75962/database/twitter_ter/schema/public/table/tweeter_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_bdd_twitter.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="90" column="32" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
         </state>
       </provider>
     </entry>
