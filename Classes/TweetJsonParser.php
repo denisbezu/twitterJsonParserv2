@@ -7,9 +7,12 @@ namespace App\Classes;
 use App\Classes\Models\City;
 use App\Classes\Models\Country;
 use App\Classes\Models\Day;
+use App\Classes\Models\Hashtag;
 use App\Classes\Models\Language;
+use App\Classes\Models\Media;
 use App\Classes\Models\Month;
 use App\Classes\Models\Region;
+use App\Classes\Models\Tweet;
 use App\Classes\Models\User;
 use App\Classes\Models\Year;
 
@@ -23,6 +26,11 @@ class TweetJsonParser
         $day = $this->processDate($json);
         $city = $this->processPlace($json);
         $user = $this->processUser($json);
+        $tweet = $this->processTweet($json, $language, $day, $city, $user);
+        $medias = $this->processMedia($json);
+        $hashtags = $this->processHashtag($json);
+
+
     }
 
     private function processLanguage($json)
@@ -149,6 +157,71 @@ class TweetJsonParser
             }
 
             return $selectUser;
+        }
+    }
+
+    private function processMedia($json)
+    {
+        $medias = array();
+        if (isset($json['entities']) && isset($json['entities']['media'])) {
+            foreach ($json['entities']['media'] as $mediaIndex => $mediaData) {
+                $media = new Media();
+                $selectMedia = $media->selectLine(array('url' => $mediaData['url']));
+                if ($selectMedia === false) {
+                    $selectMedia = $media->insertLine(array(
+                        'type' => $mediaData['type'],
+                        'url' => $mediaData['url']
+                    ));
+                }
+                $medias[] = $selectMedia;
+            }
+        }
+
+        return $medias;
+    }
+
+    private function processHashtag($json)
+    {
+        $hashtags = array();
+        if (isset($json['entities']) && isset($json['entities']['hashtags'])) {
+            foreach ($json['entities']['hashtags'] as $hashtagIndex => $hashtagData) {
+                $hashtag = new Hashtag();
+                $selectHashtag = $hashtag->selectLine(array('hashtag' => $hashtagData['text']));
+                if ($selectHashtag === false) {
+                    $selectHashtag = $hashtag->insertLine(array(
+                        'hashtag' => $hashtagData['text'],
+                        'id_subject' => null
+                    ));
+                }
+
+                $hashtags[] = $selectHashtag;
+            }
+        }
+
+        return $hashtags;
+    }
+
+    private function processTweet($json, $language, $day, $city, $user)
+    {
+        if (isset($json['_id']['$oid'])) {
+            $tweet = new Tweet();
+            $selectTweet = $tweet->selectLine(array('oid' => $json['_id']['$oid']));
+            if ($selectTweet === false) {
+                $selectTweet = $tweet->insertLine(array(
+                    'oid' => $json['_id']['$oid'],
+                    'tweet_text' => $json['text'],
+                    'favourite_count' => $json['favorite_count'],
+                    'retweet_count' => $json['retweet_count'],
+                    'source' => $json['source'],
+                    'link' => $json['link'][0],
+                    'id_language' => $language,
+                    'id_day' => $day,
+                    'id_city' => $city,
+                    'id_tweet_user' => $user
+                ));
+            }
+
+            return $selectTweet;
         }
     }
 }
