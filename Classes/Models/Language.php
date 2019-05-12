@@ -16,15 +16,17 @@ class Language extends AbstractModel implements Insertable, Selectable
         $result = $stmt->execute($params);
 
         if ($result) {
+            TwitterLogger::log()->info('Insert language ' . $params['lang']);
             return $this->pdo->lastInsertId();
         }
+        TwitterLogger::log()->error($stmt->errorInfo());
 
         return false;
     }
 
     function selectLine($params)
     {
-        $sql = 'SELECT id FROM language WHERE lang = \'' . $params['lang'] . '\';';
+        $sql = 'SELECT id FROM language WHERE lang = \'' . pg_escape_string($params['lang']) . '\';';
         $result = $this->pdo->query($sql);
         $res = $result->fetchAll();
         if (!empty($res)) {

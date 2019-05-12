@@ -16,9 +16,10 @@ class Region extends AbstractModel implements Insertable, Selectable
         $result = $stmt->execute($params);
 
         if ($result) {
-            TwitterLogger::log()->info('Insert region \'' . $params['region']);
+            TwitterLogger::log()->info('Insert region ' . $params['region']);
             return $this->pdo->lastInsertId();
         }
+        TwitterLogger::log()->error($stmt->errorInfo());
 
         return false;
     }
@@ -26,7 +27,7 @@ class Region extends AbstractModel implements Insertable, Selectable
     function selectLine($params)
     {
         $sql = 'SELECT id FROM region 
-                WHERE region = \'' . $params['region'] . '\' 
+                WHERE region = \'' . pg_escape_string($params['region']) . '\' 
                 AND id_country = \'' . $params['id_country'] . '\';';
         $result = $this->pdo->query($sql);
         $res = $result->fetchAll();

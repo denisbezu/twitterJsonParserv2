@@ -14,13 +14,18 @@ use App\Classes\Models\Month;
 use App\Classes\Models\Region;
 use App\Classes\Models\Tweet;
 use App\Classes\Models\User;
+use App\Classes\Models\UserMention;
+use App\Classes\Models\UserReply;
+use App\Classes\Models\UserRetweet;
 use App\Classes\Models\Year;
+use App\Classes\TwitterLogger;
 
 class TweetJsonParser
 {
 
     public function processInput($line)
     {
+        TwitterLogger::log()->info($line);
         $json = json_decode($line, true);
         $language = $this->processLanguage($json);
         $day = $this->processDate($json);
@@ -29,8 +34,10 @@ class TweetJsonParser
         $tweet = $this->processTweet($json, $language, $day, $city, $user);
         $medias = $this->processMedia($json);
         $hashtags = $this->processHashtag($json);
-
-
+        $mentions = $this->processMentions($json);
+        $this->addMultiTables($tweet, $medias, $hashtags, $mentions);
+        $this->processReply($json, $tweet);
+        $this->processRetweet($json, $user);
     }
 
     private function processLanguage($json)
@@ -144,15 +151,15 @@ class TweetJsonParser
     {
         if (isset($json['user'])) {
             $user = new User();
-            $selectUser = $user->selectLine(array('uid' => $json['user']['id_str']));
+            $selectUser = $user->selectLine(array('id' => $json['user']['id_str']));
             if ($selectUser === false) {
                 $selectUser = $user->insertLine(array(
+                    'id' => $json['user']['id_str'],
                     'name' => $json['user']['name'],
                     'screen_name' => $json['user']['screen_name'],
                     'followers_count' => $json['user']['followers_count'],
                     'friends_count' => $json['user']['friends_count'],
                     'location' => $json['user']['location'],
-                    'uid' => (int)$json['user']['id_str'],
                 ));
             }
 
@@ -201,14 +208,38 @@ class TweetJsonParser
         return $hashtags;
     }
 
+    private function processMentions($json)
+    {
+        $mentions = array();
+        if (isset($json['entities']) && isset($json['entities']['user_mentions'])) {
+            foreach ($json['entities']['user_mentions'] as $userMentionIndex => $userMentionData) {
+                $user = new User();
+                $selectUser = $user->selectLine(array('id' => $userMentionData['id_str']));
+                if ($selectUser === false) {
+                    $selectUser = $user->insertLine(array(
+                        'id' => $userMentionData['id_str'],
+                        'name' => $userMentionData['name'],
+                        'screen_name' => $userMentionData['screen_name'],
+                        'followers_count' => null,
+                        'friends_count' => null,
+                        'location' => null,
+                    ));
+                }
+                $mentions[] = $selectUser;
+            }
+        }
+
+        return $mentions;
+    }
+
     private function processTweet($json, $language, $day, $city, $user)
     {
-        if (isset($json['_id']['$oid'])) {
+        if (isset($json['id_str'])) {
             $tweet = new Tweet();
-            $selectTweet = $tweet->selectLine(array('oid' => $json['_id']['$oid']));
+            $selectTweet = $tweet->selectLine(array('id' => $json['id_str']));
             if ($selectTweet === false) {
                 $selectTweet = $tweet->insertLine(array(
-                    'oid' => $json['_id']['$oid'],
+                    'id' => $json['id_str'],
                     'tweet_text' => $json['text'],
                     'favourite_count' => $json['favorite_count'],
                     'retweet_count' => $json['retweet_count'],
@@ -222,6 +253,49 @@ class TweetJsonParser
             }
 
             return $selectTweet;
+        }
+    }
+
+    private function processReply($json, $tweet)
+    {
+        if (isset($json['in_reply_to_user_id_str']) && $json['in_reply_to_user_id_str'] != null) {
+            $userReply = new UserReply();
+            $userReply->insertLine(array(
+                'id_tweet' => $tweet,
+                'id_user_reply' => $json['in_reply_to_user_id_str']
+            ));
+        }
+    }
+
+    private function processRetweet($json, $user)
+    {
+        if (isset($json['retweeted_status'])) {
+            $userRetweet = new UserRetweet();
+            $userRetweet->insertLine(array(
+                'id_user_retweet' => $user,
+                'id_tweet' => $json['retweeted_status']['id_str']
+            ));
+        }
+    }
+
+    private function addMultiTables($tweet, $medias, $hashtags, $mentions)
+    {
+        foreach ($medias as $mediaId) {
+            $media = new Media();
+            $media->addTweetMedia($mediaId, $tweet);
+        }
+
+        foreach ($hashtags as $hashtagId) {
+            $hashtag = new Hashtag();
+            $hashtag->addTweetHashtag($hashtagId, $tweet);
+        }
+
+        foreach ($mentions as $mentionId) {
+            $userMention = new UserMention();
+            $userMention->insertLine(array(
+                'id_tweet' => $tweet,
+                'id_mention' => $mentionId
+            ));
         }
     }
 }

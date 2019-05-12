@@ -16,15 +16,17 @@ class Year extends AbstractModel implements Insertable, Selectable
         $result = $stmt->execute($params);
 
         if ($result) {
+            TwitterLogger::log()->info('Insert year ' . $params['year']);
             return $this->pdo->lastInsertId();
         }
+        TwitterLogger::log()->error($stmt->errorInfo());
 
         return false;
     }
 
     function selectLine($params)
     {
-        $sql = 'SELECT id FROM year WHERE year = \'' . $params['year'] . '\';';
+        $sql = 'SELECT id FROM year WHERE year = \'' . pg_escape_string($params['year']) . '\';';
         $result = $this->pdo->query($sql);
         $res = $result->fetchAll();
         if (!empty($res)) {

@@ -16,8 +16,10 @@ class Day extends AbstractModel implements Insertable, Selectable
         $result = $stmt->execute($params);
 
         if ($result) {
+            TwitterLogger::log()->info('Insert day ' . $params['day']);
             return $this->pdo->lastInsertId();
         }
+        TwitterLogger::log()->error($stmt->errorInfo());
 
         return false;
     }
@@ -25,7 +27,7 @@ class Day extends AbstractModel implements Insertable, Selectable
     function selectLine($params)
     {
         $sql = 'SELECT id FROM day 
-                WHERE day = \'' . $params['day'] . '\' 
+                WHERE day = \'' . pg_escape_string($params['day']) . '\' 
                 AND id_month = \'' . $params['id_month'] . '\';';
         $result = $this->pdo->query($sql);
         $res = $result->fetchAll();

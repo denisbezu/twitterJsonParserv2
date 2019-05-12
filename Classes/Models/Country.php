@@ -16,15 +16,17 @@ class Country extends AbstractModel implements Selectable, Insertable
         $result = $stmt->execute($params);
 
         if ($result) {
+            TwitterLogger::log()->info('Insert country ' . $params['country']);
             return $this->pdo->lastInsertId();
         }
+        TwitterLogger::log()->error($stmt->errorInfo());
 
         return false;
     }
 
     function selectLine($params)
     {
-        $sql = 'SELECT id FROM country WHERE name = \'' . $params['country'] . '\';';
+        $sql = 'SELECT id FROM country WHERE name = \'' . pg_escape_string($params['country']) . '\';';
         $result = $this->pdo->query($sql);
         $res = $result->fetchAll();
         if (!empty($res)) {

@@ -16,8 +16,10 @@ class Month extends AbstractModel implements Insertable, Selectable
         $result = $stmt->execute($params);
 
         if ($result) {
+            TwitterLogger::log()->info('Insert month ' . $params['month']);
             return $this->pdo->lastInsertId();
         }
+        TwitterLogger::log()->error($stmt->errorInfo());
 
         return false;
     }
@@ -25,7 +27,7 @@ class Month extends AbstractModel implements Insertable, Selectable
     function selectLine($params)
     {
         $sql = 'SELECT id FROM month 
-                WHERE month = \'' . $params['month'] . '\' 
+                WHERE month = \'' . pg_escape_string($params['month']) . '\' 
                 AND id_year = \'' . $params['id_year'] . '\';';
         $result = $this->pdo->query($sql);
         $res = $result->fetchAll();

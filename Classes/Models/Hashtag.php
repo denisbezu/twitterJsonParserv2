@@ -15,9 +15,10 @@ class Hashtag extends AbstractModel implements Insertable, Selectable
         $result = $stmt->execute($params);
 
         if ($result) {
+            TwitterLogger::log()->info('Insert hashtag ' . $params['hashtag']);
             return $this->pdo->lastInsertId();
         }
-        var_dump($stmt->errorInfo());
+        TwitterLogger::log()->error($stmt->errorInfo());
 
         return false;
     }
@@ -25,13 +26,28 @@ class Hashtag extends AbstractModel implements Insertable, Selectable
     function selectLine($params)
     {
         $sql = 'SELECT id FROM hashtag 
-                WHERE hashtag = \'' . $params['hashtag'] . '\';';
+                WHERE hashtag = \'' . pg_escape_string($params['hashtag']) . '\';';
         $result = $this->pdo->query($sql);
         $res = $result->fetchAll();
         if (!empty($res)) {
             TwitterLogger::log()->info('Found hashtag ' . $params['hashtag'] . ' with id ' . $res[0]['id']);
             return $res[0]['id'];
         }
+
+        return false;
+    }
+
+    public function addTweetHashtag($hashtagId, $tweetId)
+    {
+        $sql = "INSERT INTO tweet_hashtag VALUES ($tweetId, $hashtagId)";
+        $stmt = $this->pdo->prepare($sql);
+        $result = $stmt->execute();
+
+        if ($result) {
+            TwitterLogger::log()->info("Insert hashtag with id $hashtagId and tweetId $tweetId");
+            return $this->pdo->lastInsertId();
+        }
+        var_dump($stmt->errorInfo());
 
         return false;
     }

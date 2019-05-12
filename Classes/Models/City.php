@@ -16,9 +16,10 @@ class City extends AbstractModel implements Selectable, Insertable
         $result = $stmt->execute($params);
 
         if ($result) {
-            TwitterLogger::log()->info('Insert city \'' . $params['city']);
+            TwitterLogger::log()->info('Insert city ' . $params['city']);
             return $this->pdo->lastInsertId();
         }
+        TwitterLogger::log()->error($stmt->errorInfo());
 
         return false;
     }
@@ -26,7 +27,7 @@ class City extends AbstractModel implements Selectable, Insertable
     function selectLine($params)
     {
         $sql = 'SELECT id FROM city 
-                WHERE city = \'' . $params['city'] . '\' 
+                WHERE city = \'' . pg_escape_string($params['city']) . '\' 
                 AND id_region = \'' . $params['id_region'] . '\';';
         $result = $this->pdo->query($sql);
         $res = $result->fetchAll();
