@@ -197,7 +197,7 @@ class TweetJsonParser
                 if ($selectHashtag === false) {
                     $selectHashtag = $hashtag->insertLine(array(
                         'hashtag' => $hashtagData['text'],
-                        'id_subject' => null
+                        'id_topic' => null
                     ));
                 }
 

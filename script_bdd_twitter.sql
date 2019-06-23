@@ -1,4 +1,4 @@
--- CREATE DATABASE twitter_ter;
+-- CREATE DATABASE twitter_ter2;
 
 CREATE TABLE IF NOT EXISTS year
 (
@@ -58,26 +58,24 @@ CREATE TABLE IF NOT EXISTS language
     lang VARCHAR(100) NOT NULL UNIQUE
 );
 
-CREATE TABLE IF NOT EXISTS subject
+CREATE TABLE IF NOT EXISTS topic
 (
-    id      SERIAL PRIMARY KEY,
-    subject VARCHAR(100) NOT NULL
+    id    SERIAL PRIMARY KEY,
+    topic VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS hashtag
 (
-    id         SERIAL PRIMARY KEY,
-    hashtag    VARCHAR(100) NOT NULL,
-    id_subject INT          NULL,
-    FOREIGN KEY (id_subject) REFERENCES subject (id)
+    id       SERIAL PRIMARY KEY,
+    hashtag  VARCHAR(100) NOT NULL,
+    id_topic INT          NULL,
+    FOREIGN KEY (id_topic) REFERENCES topic (id)
 );
 
-CREATE TABLE IF NOT EXISTS keyword
+CREATE TABLE IF NOT EXISTS word_bag
 (
-    id         SERIAL PRIMARY KEY,
-    keyword    VARCHAR(100) NOT NULL,
-    id_subject INT          NULL,
-    FOREIGN KEY (id_subject) REFERENCES subject (id)
+    id       SERIAL PRIMARY KEY,
+    word_bag VARCHAR(100) NOT NULL
 );
 
 
@@ -134,13 +132,22 @@ CREATE TABLE IF NOT EXISTS tweet_media
     PRIMARY KEY (id_tweet, id_media)
 );
 
-CREATE TABLE IF NOT EXISTS tweet_keyword
+CREATE TABLE IF NOT EXISTS tweet_word_bag
 (
-    id_tweet   VARCHAR(255) NOT NULL,
-    id_keyword INT          NOT NULL,
+    id_tweet    VARCHAR(255) NOT NULL,
+    id_word_bag INT          NOT NULL,
     FOREIGN KEY (id_tweet) REFERENCES tweet (id),
-    FOREIGN KEY (id_keyword) REFERENCES keyword (id),
-    PRIMARY KEY (id_tweet, id_keyword)
+    FOREIGN KEY (id_word_bag) REFERENCES word_bag (id),
+    PRIMARY KEY (id_tweet, id_word_bag)
+);
+
+CREATE TABLE IF NOT EXISTS topic_word_bag
+(
+    id_topic    INT NOT NULL,
+    id_word_bag INT NOT NULL,
+    FOREIGN KEY (id_topic) REFERENCES topic (id),
+    FOREIGN KEY (id_word_bag) REFERENCES word_bag (id),
+    PRIMARY KEY (id_topic, id_word_bag)
 );
 
 CREATE TABLE IF NOT EXISTS tweet_hashtag

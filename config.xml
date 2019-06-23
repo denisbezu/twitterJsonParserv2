@@ -6,7 +6,7 @@
         <layout class="LoggerLayoutPattern">
             <param name="conversionPattern" value="%date [%logger] %message%newline" />
         </layout>
-        <param name="file" value="myLog.log" />
+        <param name="file" value="myLog2.log" />
     </appender>
 
     <logger name="TwitterLogger">
@@ -14,7 +14,7 @@
     </logger>
 
     <root>
-        <level value="TRACE" />
+        <level value="WARN" />
         <appender_ref ref="myConsoleAppender" />
     </root>
 </configuration>

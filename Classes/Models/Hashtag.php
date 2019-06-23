@@ -10,7 +10,7 @@ class Hashtag extends AbstractModel implements Insertable, Selectable
 {
     function insertLine($params)
     {
-        $sql = 'INSERT INTO hashtag (id, hashtag, id_subject) VALUES (DEFAULT, :hashtag, :id_subject)';
+        $sql = 'INSERT INTO hashtag (id, hashtag, id_topic) VALUES (DEFAULT, :hashtag, :id_topic)';
         $stmt = $this->pdo->prepare($sql);
         $result = $stmt->execute($params);
 
